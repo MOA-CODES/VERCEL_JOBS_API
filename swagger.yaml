@@ -111,7 +111,7 @@ paths:
         schema:
           type: string
         required: true
-        description: The job ID
+        description: The job ID  
         
     get:
       tags:
@@ -126,7 +126,7 @@ paths:
       deprecated: false
       security:
       - bearer: []
-
+      
     patch:
       tags:
       - Jobs
@@ -156,7 +156,7 @@ paths:
       deprecated: false
       security:
       - bearer: []
-      
+
     delete:
       tags:
       - Jobs
@@ -242,7 +242,8 @@ components:
       scheme: bearer
 security: []
 tags:
-
+- name: Misc
+  description: ''
 - name: Auth
   description: ''
 - name: Jobs
