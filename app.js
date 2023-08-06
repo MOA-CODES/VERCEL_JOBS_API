@@ -9,9 +9,9 @@ const xss = require('xss-clean')
 const eRateLimit = require('express-rate-limit')
 
 //Swagger imports 
-// const swaggerUI = require('swagger-ui-express')
-// const YAML = require('yamljs')
-// const swaggerDocument = YAML.load('./swagger.yaml')
+const swaggerUI = require('swagger-ui-express')
+const YAML = require('yamljs')
+const swaggerDocument = YAML.load('.swagger.yaml')
 
 const express = require('express')
 const app = express()
@@ -32,7 +32,7 @@ app.use(eRateLimit({
     max: 100, // limit each Ip to 100 requests per windowMs
 }))
 
-// app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))//swagger ui setup for docs
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))//swagger ui setup for docs
 app.get('/', (req, res)=>{
     res.send('<h1>Hiring API</h1><p>This is an API made for:</p><li>Registering Users</li><li>Logging in Users</li><p>Provided you have the right authorization after logging in you can perform:</p>\
     <li>Creating Jobs for a User</li>\
