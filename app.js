@@ -11,7 +11,7 @@ const eRateLimit = require('express-rate-limit')
 //Swagger imports 
 const swaggerUI = require('swagger-ui-express')
 const YAML = require('yamljs')
-const swaggerDocument = YAML.load('./models/swagger.yaml')
+const swaggerDocument = YAML.load('./swagger.yaml')
 
 const express = require('express')
 const app = express()
