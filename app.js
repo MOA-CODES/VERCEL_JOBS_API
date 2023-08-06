@@ -11,7 +11,11 @@ const eRateLimit = require('express-rate-limit')
 //Swagger imports 
 const swaggerUI = require('swagger-ui-express')
 const YAML = require('yamljs')
-const swaggerDocument = YAML.load('./swagger.yaml')
+//because of vercel's issues with swagger
+var path = require('path')
+var swaggerPath = path.resolve(__dirname,'./swagger.yaml')
+const swaggerDocument = YAML.load(swaggerPath)
+//
 
 const express = require('express')
 const app = express()
