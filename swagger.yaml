@@ -4,7 +4,7 @@ info:
   contact: {}
   version: '1.0'
 servers:
-- url: https://hiring-api-b89ad54ada39.herokuapp.com/api/v1
+- url: https://vercel-jobs-api-igto.vercel.app/api/v1
   variables: {}
 paths:
   /auth/login:
