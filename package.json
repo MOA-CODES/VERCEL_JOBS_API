@@ -9,7 +9,6 @@
   "engines": {
     "node": "18.x"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -26,7 +25,7 @@
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.1",
     "rate-limiter": "^0.2.0",
-    "swagger-ui-express": "^5.0.0",
+    "swagger-ui-express": "^4.3.0",
     "xss-clean": "^0.1.4",
     "yamljs": "^0.3.0"
   },

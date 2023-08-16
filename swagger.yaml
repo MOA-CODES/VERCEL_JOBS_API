@@ -241,6 +241,7 @@ components:
       type: http
       scheme: bearer
 security: []
+apis: ["src/**/*.js"]
 tags:
 - name: Misc
   description: ''
