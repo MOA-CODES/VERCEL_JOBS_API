@@ -29,6 +29,9 @@ const jobs_R = require('./routes/jobs_R')
 const notfound = require('./middleware/not-found')
 const errorHandler = require('./middleware/error-handler')
 
+
+const CSS_URL = "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css";// to address swagger ui issue
+
 //app.use, functions, and variablles assigning
 app.set('trust proxy', 1);
 app.use(eRateLimit({
@@ -36,7 +39,7 @@ app.use(eRateLimit({
     max: 100, // limit each Ip to 100 requests per windowMs
 }))
 
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))//swagger ui setup for docs
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument,{ customCssUrl: CSS_URL }))//swagger ui setup for docs
 app.get('/', (req, res)=>{
     res.send('<h1>Hiring API</h1><p>This is an API made for:</p><li>Registering Users</li><li>Logging in Users</li><p>Provided you have the right authorization after logging in you can perform:</p>\
     <li>Creating Jobs for a User</li>\
