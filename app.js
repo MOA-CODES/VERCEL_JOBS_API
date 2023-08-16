@@ -30,7 +30,7 @@ const notfound = require('./middleware/not-found')
 const errorHandler = require('./middleware/error-handler')
 
 
-const CSS_URL = "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/swagger-ui.min.css";// to address swagger ui issue
+const CSS_URL = "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.0.0/swagger-ui.min.css";// to address swagger ui issue
 
 //app.use, functions, and variablles assigning
 app.set('trust proxy', 1);
